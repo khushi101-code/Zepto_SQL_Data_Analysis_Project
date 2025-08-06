@@ -48,3 +48,54 @@ CREATE TABLE zepto (
   outOfStock BOOLEAN,
   quantity INTEGER
 );
+2️⃣ Data Import
+Used pgAdmin's import feature to load the CSV file into PostgreSQL.
+
+3️⃣ 🔍 Data Exploration
+Counted total records in the dataset
+
+Viewed sample records to understand structure
+
+Checked for null values across all columns
+
+Identified unique product categories
+
+Compared in-stock vs out-of-stock products
+
+Detected duplicate product names with different SKUs
+
+4️⃣ 🧹 Data Cleaning
+Removed rows with MRP = 0 or discountedSellingPrice = 0
+
+Converted mrp and discountedSellingPrice from paise to ₹ for consistency
+
+5️⃣ 📊 Business Insights & Analysis
+Top 10 Best Value Products based on highest discount %
+
+High-MRP Products Currently Out of Stock
+
+Estimated Revenue potential per product category
+
+Expensive, Low Discount Products (MRP > ₹500 and discount < 10%)
+
+Top 5 Categories with Highest Average Discount
+
+Price per Gram analysis to find value-for-money products
+
+Weight-Based Grouping:
+
+Low: <250g
+
+Medium: 250g–500g
+
+Bulk: >500g
+
+Total Inventory Weight per product category
+
+📎 Tools Used
+PostgreSQL
+
+pgAdmin
+
+SQL (DDL, DML, Aggregations, Joins, CASE, Window Functions)
+
